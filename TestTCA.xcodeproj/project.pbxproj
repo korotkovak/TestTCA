@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C1324E402B4E833100A07EC9 /* TestTCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1324E3F2B4E833100A07EC9 /* TestTCAApp.swift */; };
-		C1324E422B4E833100A07EC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1324E412B4E833100A07EC9 /* ContentView.swift */; };
+		C1324E422B4E833100A07EC9 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1324E412B4E833100A07EC9 /* CounterView.swift */; };
 		C1324E442B4E833200A07EC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1324E432B4E833200A07EC9 /* Assets.xcassets */; };
 		C1324E472B4E833200A07EC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1324E462B4E833200A07EC9 /* Preview Assets.xcassets */; };
 		C1324E4F2B4E8B1100A07EC9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C1324E4E2B4E8B1100A07EC9 /* ComposableArchitecture */; };
@@ -17,9 +17,10 @@
 /* Begin PBXFileReference section */
 		C1324E3C2B4E833100A07EC9 /* TestTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1324E3F2B4E833100A07EC9 /* TestTCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTCAApp.swift; sourceTree = "<group>"; };
-		C1324E412B4E833100A07EC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C1324E412B4E833100A07EC9 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		C1324E432B4E833200A07EC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1324E462B4E833200A07EC9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C1324E502B4E980D00A07EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +54,9 @@
 		C1324E3E2B4E833100A07EC9 /* TestTCA */ = {
 			isa = PBXGroup;
 			children = (
+				C1324E502B4E980D00A07EC9 /* Info.plist */,
 				C1324E3F2B4E833100A07EC9 /* TestTCAApp.swift */,
-				C1324E412B4E833100A07EC9 /* ContentView.swift */,
+				C1324E412B4E833100A07EC9 /* CounterView.swift */,
 				C1324E432B4E833200A07EC9 /* Assets.xcassets */,
 				C1324E452B4E833200A07EC9 /* Preview Content */,
 			);
@@ -145,7 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1324E422B4E833100A07EC9 /* ContentView.swift in Sources */,
+				C1324E422B4E833100A07EC9 /* CounterView.swift in Sources */,
 				C1324E402B4E833100A07EC9 /* TestTCAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +285,7 @@
 				DEVELOPMENT_TEAM = KD67T552T3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestTCA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,6 +315,7 @@
 				DEVELOPMENT_TEAM = KD67T552T3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestTCA/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

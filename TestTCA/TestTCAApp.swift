@@ -16,7 +16,7 @@ struct TestTCAApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(store: TestTCAApp.store)
+            CounterView(store: TestTCAApp.store)
         }
     }
 }
