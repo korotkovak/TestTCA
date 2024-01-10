@@ -8,6 +8,8 @@
 import SwiftUI
 import ComposableArchitecture
 
+
+// Essentials
 @main
 struct TestTCAApp: App {
     static let store = Store(initialState: AppFeature.State()) {
@@ -20,3 +22,5 @@ struct TestTCAApp: App {
         }
     }
 }
+
+// Navigation
