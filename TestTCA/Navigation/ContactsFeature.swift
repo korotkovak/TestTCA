@@ -8,11 +8,6 @@
 import Foundation
 import ComposableArchitecture
 
-struct Contact: Equatable, Identifiable {
-    var id: UUID
-    var name: String
-}
-
 @Reducer
 struct ContactsFeature {
     struct State: Equatable {
@@ -33,14 +28,8 @@ struct ContactsFeature {
                     contact: Contact(id: UUID(), name: "")
                 )
                 return .none
-            case .addContact(.presented(.cancelButtonTapped)):
-                state.addContact = nil
-                return .none
-            case .addContact(.presented(.saveButtonTapped)):
-                guard let contact = state.addContact?.contact
-                else { return .none }
+            case let .addContact(.presented(.delegate(.saveContact(contact)))):
                 state.contacts.append(contact)
-                state.addContact = nil
                 return .none
             case .addContact:
                 return .none

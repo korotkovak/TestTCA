@@ -21,6 +21,7 @@
 		C190C61B2B4ECA7100E19E4C /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190C61A2B4ECA7100E19E4C /* ContactsView.swift */; };
 		C190C61D2B4ED38B00E19E4C /* AddContactFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190C61C2B4ED38B00E19E4C /* AddContactFeature.swift */; };
 		C190C61F2B4ED44700E19E4C /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190C61E2B4ED44700E19E4C /* AddContactView.swift */; };
+		C190C6212B4EDBDB00E19E4C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190C6202B4EDBDB00E19E4C /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		C190C61A2B4ECA7100E19E4C /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		C190C61C2B4ED38B00E19E4C /* AddContactFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactFeature.swift; sourceTree = "<group>"; };
 		C190C61E2B4ED44700E19E4C /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		C190C6202B4EDBDB00E19E4C /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +135,9 @@
 		C190C6152B4EC6CD00E19E4C /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				C190C6182B4EC97600E19E4C /* ContactsFeature.swift */,
-				C190C61A2B4ECA7100E19E4C /* ContactsView.swift */,
-				C190C61C2B4ED38B00E19E4C /* AddContactFeature.swift */,
-				C190C61E2B4ED44700E19E4C /* AddContactView.swift */,
+				C190C6202B4EDBDB00E19E4C /* Contact.swift */,
+				C190C6222B4EDBF400E19E4C /* Parent */,
+				C190C6232B4EDC0500E19E4C /* Children */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -155,6 +156,24 @@
 			children = (
 			);
 			path = NavigationTests;
+			sourceTree = "<group>";
+		};
+		C190C6222B4EDBF400E19E4C /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				C190C6182B4EC97600E19E4C /* ContactsFeature.swift */,
+				C190C61A2B4ECA7100E19E4C /* ContactsView.swift */,
+			);
+			name = Parent;
+			sourceTree = "<group>";
+		};
+		C190C6232B4EDC0500E19E4C /* Children */ = {
+			isa = PBXGroup;
+			children = (
+				C190C61C2B4ED38B00E19E4C /* AddContactFeature.swift */,
+				C190C61E2B4ED44700E19E4C /* AddContactView.swift */,
+			);
+			name = Children;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +284,7 @@
 			files = (
 				C190C60F2B4EB8AB00E19E4C /* AppFeature.swift in Sources */,
 				C190C60D2B4EAF2600E19E4C /* NumberFactClient.swift in Sources */,
+				C190C6212B4EDBDB00E19E4C /* Contact.swift in Sources */,
 				C1324E422B4E833100A07EC9 /* CounterView.swift in Sources */,
 				C190C61D2B4ED38B00E19E4C /* AddContactFeature.swift in Sources */,
 				C190C6132B4EBB6D00E19E4C /* AppView.swift in Sources */,
