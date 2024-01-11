@@ -15,7 +15,7 @@ struct ContactsFeature {
         @PresentationState var destination: Destination.State?
         var path = StackState<ContactDetailFeature.State>()
     }
-    
+
     enum Action {
         case addButtonTapped
         case deleteButtonTapped(id: Contact.ID)
@@ -55,6 +55,11 @@ struct ContactsFeature {
                 state.destination = .alert(.deleteConfirmation(id: id))
                 return .none
 
+            case let .path(.element(id: id, action: .delegate(.confirmDeletion))):
+                guard let detailState = state.path[id: id]
+                else { return .none }
+                state.contacts.remove(id: detailState.contact.id)
+                return .none
             case .path:
                 return .none
             }
@@ -69,13 +74,13 @@ struct ContactsFeature {
 }
 
 extension AlertState where Action == ContactsFeature.Action.Alert {
-  static func deleteConfirmation(id: UUID) -> Self {
-    Self {
-      TextState("Are you sure?")
-    } actions: {
-      ButtonState(role: .destructive, action: .confirmDeletion(id: id)) {
-        TextState("Delete")
-      }
+    static func deleteConfirmation(id: UUID) -> Self {
+        Self {
+            TextState("Are you sure?")
+        } actions: {
+            ButtonState(role: .destructive, action: .confirmDeletion(id: id)) {
+                TextState("Delete")
+            }
+        }
     }
-  }
 }
