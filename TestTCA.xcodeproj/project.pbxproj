@@ -154,9 +154,9 @@
 			children = (
 				C190C6202B4EDBDB00E19E4C /* Contact.swift */,
 				C190C6242B4FCB6E00E19E4C /* Destination.swift */,
-				C1366CC02B4FE45500954B88 /* DetailView */,
 				C190C6222B4EDBF400E19E4C /* ContactsView */,
 				C190C6232B4EDC0500E19E4C /* AddContactView */,
+				C1366CC02B4FE45500954B88 /* DetailView */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
