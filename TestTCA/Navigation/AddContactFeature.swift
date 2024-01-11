@@ -20,7 +20,7 @@ struct AddContactFeature {
         case setName(String)
         case delegate(Delegate)
 
-        enum Delegate: Equatable {
+        enum Delegate {
             case saveContact(Contact)
         }
     }
