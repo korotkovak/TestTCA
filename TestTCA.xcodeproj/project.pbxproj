@@ -13,6 +13,8 @@
 		C1324E472B4E833200A07EC9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1324E462B4E833200A07EC9 /* Preview Assets.xcassets */; };
 		C1324E4F2B4E8B1100A07EC9 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = C1324E4E2B4E8B1100A07EC9 /* ComposableArchitecture */; };
 		C1324E5C2B4E9EC800A07EC9 /* CounterFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1324E5B2B4E9EC800A07EC9 /* CounterFeatureTests.swift */; };
+		C1366CBF2B4FE3E100954B88 /* ContactDetailFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1366CBE2B4FE3E100954B88 /* ContactDetailFeature.swift */; };
+		C1366CC22B4FE47300954B88 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1366CC12B4FE47300954B88 /* ContactDetailView.swift */; };
 		C190C60D2B4EAF2600E19E4C /* NumberFactClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190C60C2B4EAF2500E19E4C /* NumberFactClient.swift */; };
 		C190C60F2B4EB8AB00E19E4C /* AppFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190C60E2B4EB8AB00E19E4C /* AppFeature.swift */; };
 		C190C6112B4EB94000E19E4C /* AppFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C190C6102B4EB94000E19E4C /* AppFeatureTests.swift */; };
@@ -45,6 +47,8 @@
 		C1324E502B4E980D00A07EC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C1324E592B4E9EC800A07EC9 /* TestTCATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestTCATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1324E5B2B4E9EC800A07EC9 /* CounterFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeatureTests.swift; sourceTree = "<group>"; };
+		C1366CBE2B4FE3E100954B88 /* ContactDetailFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailFeature.swift; sourceTree = "<group>"; };
+		C1366CC12B4FE47300954B88 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
 		C190C60C2B4EAF2500E19E4C /* NumberFactClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFactClient.swift; sourceTree = "<group>"; };
 		C190C60E2B4EB8AB00E19E4C /* AppFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeature.swift; sourceTree = "<group>"; };
 		C190C6102B4EB94000E19E4C /* AppFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeatureTests.swift; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 			path = TestTCATests;
 			sourceTree = "<group>";
 		};
+		C1366CC02B4FE45500954B88 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				C1366CBE2B4FE3E100954B88 /* ContactDetailFeature.swift */,
+				C1366CC12B4FE47300954B88 /* ContactDetailView.swift */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
 		C190C6142B4EC6AA00E19E4C /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,8 +154,9 @@
 			children = (
 				C190C6202B4EDBDB00E19E4C /* Contact.swift */,
 				C190C6242B4FCB6E00E19E4C /* Destination.swift */,
-				C190C6222B4EDBF400E19E4C /* Parent */,
-				C190C6232B4EDC0500E19E4C /* Children */,
+				C1366CC02B4FE45500954B88 /* DetailView */,
+				C190C6222B4EDBF400E19E4C /* ContactsView */,
+				C190C6232B4EDC0500E19E4C /* AddContactView */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -164,22 +178,22 @@
 			path = NavigationTests;
 			sourceTree = "<group>";
 		};
-		C190C6222B4EDBF400E19E4C /* Parent */ = {
+		C190C6222B4EDBF400E19E4C /* ContactsView */ = {
 			isa = PBXGroup;
 			children = (
 				C190C6182B4EC97600E19E4C /* ContactsFeature.swift */,
 				C190C61A2B4ECA7100E19E4C /* ContactsView.swift */,
 			);
-			name = Parent;
+			name = ContactsView;
 			sourceTree = "<group>";
 		};
-		C190C6232B4EDC0500E19E4C /* Children */ = {
+		C190C6232B4EDC0500E19E4C /* AddContactView */ = {
 			isa = PBXGroup;
 			children = (
 				C190C61C2B4ED38B00E19E4C /* AddContactFeature.swift */,
 				C190C61E2B4ED44700E19E4C /* AddContactView.swift */,
 			);
-			name = Children;
+			name = AddContactView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +306,8 @@
 				C190C60D2B4EAF2600E19E4C /* NumberFactClient.swift in Sources */,
 				C190C6212B4EDBDB00E19E4C /* Contact.swift in Sources */,
 				C1324E422B4E833100A07EC9 /* CounterView.swift in Sources */,
+				C1366CBF2B4FE3E100954B88 /* ContactDetailFeature.swift in Sources */,
+				C1366CC22B4FE47300954B88 /* ContactDetailView.swift in Sources */,
 				C190C61D2B4ED38B00E19E4C /* AddContactFeature.swift in Sources */,
 				C190C6132B4EBB6D00E19E4C /* AppView.swift in Sources */,
 				C1324E402B4E833100A07EC9 /* TestTCAApp.swift in Sources */,
