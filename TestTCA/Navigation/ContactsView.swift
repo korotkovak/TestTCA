@@ -16,7 +16,16 @@ struct ContactsView: View {
             WithViewStore(self.store, observe: \.contacts) { viewStore in
                 List {
                     ForEach(viewStore.state) { contact in
-                        Text(contact.name)
+                        HStack {
+                            Text(contact.name)
+                            Spacer()
+                            Button {
+                                viewStore.send(.deleteButtonTapped(id: contact.id))
+                            } label: {
+                                Image(systemName: "trash")
+                                    .foregroundColor(.red)
+                            }
+                        }
                     }
                 }
                 .navigationTitle("Contacts")
@@ -40,21 +49,27 @@ struct ContactsView: View {
                 AddContactView(store: addContactStore)
             }
         }
+        .alert(
+            store: self.store.scope(
+                state: \.$alert,
+                action: \.alert
+            )
+        )
     }
 }
 
 #Preview {
     ContactsView(
-      store: Store(
-        initialState: ContactsFeature.State(
-          contacts: [
-            Contact(id: UUID(), name: "Blob"),
-            Contact(id: UUID(), name: "Blob Jr"),
-            Contact(id: UUID(), name: "Blob Sr"),
-          ]
-        )
-      ) {
-        ContactsFeature()
-      }
+        store: Store(
+            initialState: ContactsFeature.State(
+                contacts: [
+                    Contact(id: UUID(), name: "Blob"),
+                    Contact(id: UUID(), name: "Blob Jr"),
+                    Contact(id: UUID(), name: "Blob Sr"),
+                ]
+            )
+        ) {
+            ContactsFeature()
+        }
     )
 }
